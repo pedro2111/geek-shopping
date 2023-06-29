@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{4D56B7A3-AADA-4550-8778-CFC82C54ACB4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{33E3E132-76B1-4505-BAC6-15E44A82E397}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShopping.Web", "GeekShopping.Web\GeekShopping.Web.csproj", "{E88AA644-5000-4A5B-83AA-DDF8759E6278}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShopping.ProductAPI", "GeekShopping.ProductAPI\GeekShopping.ProductAPI.csproj", "{B8216CD1-D786-4D33-8514-466D9404BF5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E88AA644-5000-4A5B-83AA-DDF8759E6278}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E88AA644-5000-4A5B-83AA-DDF8759E6278}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E88AA644-5000-4A5B-83AA-DDF8759E6278}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E88AA644-5000-4A5B-83AA-DDF8759E6278}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8216CD1-D786-4D33-8514-466D9404BF5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8216CD1-D786-4D33-8514-466D9404BF5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8216CD1-D786-4D33-8514-466D9404BF5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8216CD1-D786-4D33-8514-466D9404BF5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E9C2A689-6C1C-42CB-9BB5-46686F2A3BD8}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E88AA644-5000-4A5B-83AA-DDF8759E6278} = {4D56B7A3-AADA-4550-8778-CFC82C54ACB4}
+		{B8216CD1-D786-4D33-8514-466D9404BF5F} = {33E3E132-76B1-4505-BAC6-15E44A82E397}
+	EndGlobalSection
+EndGlobal
