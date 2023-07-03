@@ -1,4 +1,7 @@
-﻿using GeekShopping.ProductAPI.Model.Context;
+﻿using AutoMapper;
+using GeekShopping.ProductAPI.Config;
+using GeekShopping.ProductAPI.Model.Context;
+using GeekShopping.ProductAPI.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
@@ -14,6 +17,13 @@ builder.Services.AddSwaggerGen();
 var connectionString = "PostgresConnectionString";
 
 builder.Services.AddDbContext<PostgresContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString(connectionString)));
+
+IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
+builder.Services.AddSingleton(mapper);
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
 
 //builder.Configuration["MySqlConnection:MysqlConnectionString"];
  
