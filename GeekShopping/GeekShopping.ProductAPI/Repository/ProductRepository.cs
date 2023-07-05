@@ -29,7 +29,7 @@ namespace GeekShopping.ProductAPI.Repository
 
         public async Task<ProductVO> FindById(long id)
         {
-            Product product = await _context.Products.Where(p => p.Id == id).FirstOrDefaultAsync();
+            Product product = await _context.Products.Where(p => p.Id == id).FirstOrDefaultAsync() ?? new Product();
 
             return _mapper.Map<ProductVO>(product);
         }
@@ -57,32 +57,23 @@ namespace GeekShopping.ProductAPI.Repository
         {
             try
             {
-                Product product = await _context.Products.Where(p => p.Id == id).FirstOrDefaultAsync();
+                Product product = await _context.Products.Where(p => p.Id == id).FirstOrDefaultAsync() ?? new Product(); //caso não encontre um produto, vai criar uma instancia vazia, pois não pode ser nulo
 
-                if (product == null)
+                if (product.Id <= 0)
                 {
                     return false;
                 }
                 else
                 {
                     _context.Products.Remove(product);
-                    _context.SaveChangesAsync();
+                    await _context.SaveChangesAsync();
                     return true;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
-        }
-
-        
-
-       
-
-        public Task<ProductVO> Update(ProductVO vo)
-        {
-            throw new NotImplementedException();
         }
     }
 }

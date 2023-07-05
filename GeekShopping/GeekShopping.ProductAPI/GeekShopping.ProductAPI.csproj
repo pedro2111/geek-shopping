@@ -24,6 +24,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.14" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,12 +32,14 @@
     <None Remove="Model\Base\" />
     <None Remove="Model\Context\" />
     <None Remove="Migrations\" />
+    <None Remove="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
     <Folder Include="Model\Base\" />
     <Folder Include="Model\Context\" />
     <Folder Include="Migrations\" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Migrations\20230629205432_AddProductDataTableOnDB.cs" />

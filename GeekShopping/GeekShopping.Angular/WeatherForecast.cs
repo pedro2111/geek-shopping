@@ -1,4 +1,4 @@
-﻿namespace GeekShopping.ProductAPI;
+﻿namespace GeekShopping.Angular;
 
 public class WeatherForecast
 {
