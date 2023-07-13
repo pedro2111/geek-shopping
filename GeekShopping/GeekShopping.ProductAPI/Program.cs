@@ -17,6 +17,10 @@ builder.Services.AddSwaggerGen(c=> {
     c.SwaggerDoc("v1", new OpenApiInfo{Title = "GeekShopping.ProductAPI", Version = "v1"});
 });
 
+builder.Services.AddCors(c => {
+    c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
+
 var connectionString = "PostgresConnectionString";
 
 builder.Services.AddDbContext<PostgresContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString(connectionString)));
@@ -44,6 +48,7 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();
 
 app.MapControllers();
+app.UseCors("AllowOrigin");
 
 app.Run();
 
